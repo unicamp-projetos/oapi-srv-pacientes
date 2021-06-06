@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Builder
 @Data
 @NoArgsConstructor
@@ -20,5 +18,4 @@ public class Paciente {
     private String nomePai;
     private Long nroCartaoSaude;
     private Long idMedico;
-    private List<Long> idAcompanhantes;
 }
