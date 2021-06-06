@@ -16,7 +16,6 @@ public class PacienteRequestToPaciente {
                 .rg(request.getRg())
                 .cpf(request.getCpf())
                 .idMedico(request.getIdMedico())
-                .idAcompanhantes(request.getIdAcompanhantes())
                 .build();
     }
 }

@@ -2,9 +2,11 @@ package br.unicamp.mc851.evisita.oapisrvpacientes.database.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
-import java.util.Set;
 
 @Data
 @Builder
@@ -29,8 +31,6 @@ public class PacienteModel {
     @NonNull
     @Column(name = "medico_pk")
     private Long idMedico;
-    @ElementCollection
-    private Set<Long> idAcompanhantes;
     private LocalDateTime dataRegistro;
     private LocalDateTime dataAtualizacao;
 }

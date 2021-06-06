@@ -3,8 +3,6 @@ package br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 @Builder
 public class PacienteRequest {
@@ -16,5 +14,4 @@ public class PacienteRequest {
     private String nomePai;
     private Long nroCartaoSaude;
     private Long idMedico;
-    private List<Long> idAcompanhantes;
 }
