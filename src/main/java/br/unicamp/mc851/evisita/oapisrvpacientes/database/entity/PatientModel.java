@@ -14,23 +14,23 @@ import java.time.LocalDateTime;
 @Table(name = "pacientes")
 @AllArgsConstructor
 @NoArgsConstructor
-public class PacienteModel {
+public class PatientModel {
     @Id
     @Column(name = "paciente_prontuario_pk")
     @NonNull
-    private Long prontuario;
+    private Long medicalRecord;
     @NonNull
-    private String nome;
+    private String name;
     @NonNull
-    private Long rg;
+    private String rg;
     @NonNull
     private Long cpf;
-    private String nomeMae;
-    private String nomePai;
-    private Long nroCartaoSaude;
+    private String motherName;
+    private String fatherName;
+    private Long susCardNumber;
     @NonNull
     @Column(name = "medico_pk")
-    private Long idMedico;
-    private LocalDateTime dataRegistro;
-    private LocalDateTime dataAtualizacao;
+    private Long doctorId;
+    private LocalDateTime recordDate;
+    private LocalDateTime updateDate;
 }

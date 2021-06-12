@@ -1,9 +1,9 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.database.impl;
 
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PacienteModelToPaciente;
-import br.unicamp.mc851.evisita.oapisrvpacientes.database.GetPacientes;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientModelToPatient;
+import br.unicamp.mc851.evisita.oapisrvpacientes.database.GetPatients;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.repository.PacienteRepository;
-import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Paciente;
+import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +12,13 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class GetPacientesImpl implements GetPacientes {
+public class GetPatientsImpl implements GetPatients {
     private final PacienteRepository repository;
     @Override
-    public List<Paciente> execute() {
+    public List<Patient> execute() {
         return repository.findAll()
                 .stream()
-                .map(PacienteModelToPaciente::convert)
+                .map(PatientModelToPatient::convert)
                 .collect(Collectors.toList());
     }
 }

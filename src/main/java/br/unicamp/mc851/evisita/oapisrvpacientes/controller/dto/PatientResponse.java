@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Data
 @Builder
-public class PacienteResponse {
-    private Long prontuario;
-    private String nome;
+public class PatientResponse {
+    private Long medicalRecord;
+    private String name;
     private Long cpf;
-    private Long rg;
-    private Long idMedico;
+    private String rg;
+    private Long doctorId;
 }
