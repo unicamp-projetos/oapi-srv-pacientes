@@ -20,6 +20,9 @@ public class PatientAdapter {
                 .medicalRecord(model.getMedicalRecord())
                 .susCardNumber(model.getSusCardNumber())
                 .doctor(model.getDoctor())
+                .bed(model.getBed())
+                .room(model.getRoom())
+                .functionalUnit(model.getFunctionalUnit())
                 .build();
     }
 
@@ -33,6 +36,9 @@ public class PatientAdapter {
                 .rg(request.getRg())
                 .cpf(request.getCpf())
                 .doctor(request.getDoctor())
+                .bed(request.getBed())
+                .room(request.getRoom())
+                .functionalUnit(request.getFunctionalUnit())
                 .build();
     }
 }

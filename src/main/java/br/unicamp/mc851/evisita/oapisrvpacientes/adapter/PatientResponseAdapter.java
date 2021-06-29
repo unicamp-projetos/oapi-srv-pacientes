@@ -14,6 +14,9 @@ public class PatientResponseAdapter {
                 .cpf(patient.getCpf())
                 .rg(patient.getRg())
                 .doctor(patient.getDoctor())
+                .bed(patient.getBed())
+                .room(patient.getRoom())
+                .functionalUnit(patient.getFunctionalUnit())
                 .build();
     }
 }

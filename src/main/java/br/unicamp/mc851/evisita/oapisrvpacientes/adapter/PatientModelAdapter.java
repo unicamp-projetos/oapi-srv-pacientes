@@ -21,6 +21,9 @@ public class PatientModelAdapter {
                 .recordDate(LocalDateTime.now())
                 .updateDate(LocalDateTime.now())
                 .doctor(patient.getDoctor())
+                .bed(patient.getBed())
+                .room(patient.getRoom())
+                .functionalUnit(patient.getFunctionalUnit())
                 .build();
     }
 }
