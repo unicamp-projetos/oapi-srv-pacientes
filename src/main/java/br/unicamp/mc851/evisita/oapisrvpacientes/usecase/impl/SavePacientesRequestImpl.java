@@ -1,7 +1,7 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.usecase.impl;
 
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientRequestToPatient;
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientToPatientResponse;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientAdapter;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientResponseAdapter;
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientRequest;
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientResponse;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.SavePatient;
@@ -15,7 +15,7 @@ public class SavePacientesRequestImpl implements SavePatientRequest {
     private final SavePatient savePatient;
     @Override
     public PatientResponse execute(PatientRequest patientRequest) {
-        var paciente = savePatient.execute(PatientRequestToPatient.convert(patientRequest));
-        return PatientToPatientResponse.convert(paciente);
+        var paciente = savePatient.execute(PatientAdapter.convert(patientRequest));
+        return PatientResponseAdapter.convert(paciente);
     }
 }

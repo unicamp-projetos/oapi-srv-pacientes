@@ -10,5 +10,8 @@ public class PatientResponse {
     private String name;
     private Long cpf;
     private String rg;
-    private Long doctorId;
+    private String doctor;
+    private String bed;
+    private String functionalUnit;
+    private String room;
 }

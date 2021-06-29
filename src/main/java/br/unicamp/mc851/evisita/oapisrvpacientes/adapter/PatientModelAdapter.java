@@ -2,11 +2,13 @@ package br.unicamp.mc851.evisita.oapisrvpacientes.adapter;
 
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.entity.PatientModel;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
+import lombok.experimental.UtilityClass;
 
 import java.time.LocalDateTime;
 
-public class PatientToPatientModel {
-    private PatientToPatientModel() {}
+@UtilityClass
+public class PatientModelAdapter {
+
     public static PatientModel convert(Patient patient) {
         return PatientModel.builder()
                 .medicalRecord(patient.getMedicalRecord())
@@ -18,7 +20,7 @@ public class PatientToPatientModel {
                 .susCardNumber(patient.getSusCardNumber())
                 .recordDate(LocalDateTime.now())
                 .updateDate(LocalDateTime.now())
-                .doctorId(patient.getDoctorId())
+                .doctor(patient.getDoctor())
                 .build();
     }
 }
