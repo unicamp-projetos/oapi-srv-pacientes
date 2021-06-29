@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://evisita-patientsdb:5432/patientsdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080

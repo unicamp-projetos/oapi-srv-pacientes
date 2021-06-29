@@ -2,9 +2,10 @@ package br.unicamp.mc851.evisita.oapisrvpacientes.adapter;
 
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientResponse;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
+import lombok.experimental.UtilityClass;
 
-public class PatientToPatientResponse {
-    private PatientToPatientResponse() {}
+@UtilityClass
+public class PatientResponseAdapter {
 
     public static PatientResponse convert(Patient patient) {
         return PatientResponse.builder()
@@ -12,7 +13,7 @@ public class PatientToPatientResponse {
                 .name(patient.getName())
                 .cpf(patient.getCpf())
                 .rg(patient.getRg())
-                .doctorId(patient.getDoctorId())
+                .doctor(patient.getDoctor())
                 .build();
     }
 }

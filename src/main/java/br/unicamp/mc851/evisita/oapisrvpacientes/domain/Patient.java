@@ -17,5 +17,8 @@ public class Patient {
     private String motherName;
     private String fatherName;
     private Long susCardNumber;
-    private Long doctorId;
+    private String doctor;
+    private String functionalUnit;
+    private String bed;
+    private String room;
 }

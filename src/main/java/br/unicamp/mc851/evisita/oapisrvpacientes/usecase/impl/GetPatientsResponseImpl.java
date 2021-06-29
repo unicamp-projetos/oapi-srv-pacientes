@@ -1,6 +1,6 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.usecase.impl;
 
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientToPatientResponse;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientResponseAdapter;
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientResponse;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.GetPatients;
 import br.unicamp.mc851.evisita.oapisrvpacientes.usecase.GetPatientsResponse;
@@ -18,7 +18,7 @@ public class GetPatientsResponseImpl implements GetPatientsResponse {
     public List<PatientResponse> execute() {
         return getPatients.execute()
                 .stream()
-                .map(PatientToPatientResponse::convert)
+                .map(PatientResponseAdapter::convert)
                 .collect(Collectors.toList());
     }
 }

@@ -1,7 +1,7 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.database.impl;
 
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientModelToPatient;
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientToPatientModel;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientAdapter;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientModelAdapter;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.SavePatient;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.repository.PacienteRepository;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
@@ -15,7 +15,7 @@ public class SavePatientImpl implements SavePatient {
 
     @Override
     public Patient execute(Patient patient) {
-        var pacienteModel = repository.save(PatientToPatientModel.convert(patient));
-        return PatientModelToPatient.convert(pacienteModel);
+        var pacienteModel = repository.save(PatientModelAdapter.convert(patient));
+        return PatientAdapter.convert(pacienteModel);
     }
 }

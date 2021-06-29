@@ -1,6 +1,6 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.database.impl;
 
-import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientModelToPatient;
+import br.unicamp.mc851.evisita.oapisrvpacientes.adapter.PatientAdapter;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.GetPatients;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.repository.PacienteRepository;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
@@ -18,7 +18,7 @@ public class GetPatientsImpl implements GetPatients {
     public List<Patient> execute() {
         return repository.findAll()
                 .stream()
-                .map(PatientModelToPatient::convert)
+                .map(PatientAdapter::convert)
                 .collect(Collectors.toList());
     }
 }

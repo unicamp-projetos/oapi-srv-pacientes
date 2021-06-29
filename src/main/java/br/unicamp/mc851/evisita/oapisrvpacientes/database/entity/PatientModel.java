@@ -28,9 +28,11 @@ public class PatientModel {
     private String motherName;
     private String fatherName;
     private Long susCardNumber;
-    @NonNull
     @Column(name = "medico_pk")
-    private Long doctorId;
+    private @NonNull String doctor;
     private LocalDateTime recordDate;
     private LocalDateTime updateDate;
+    private String functionalUnit;
+    private String bed;
+    private String room;
 }

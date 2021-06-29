@@ -17,6 +17,8 @@ public class PatientRequest {
     private Long cpf;
     private String rg;
     private Long susCardNumber;
-    @NonNull
-    private Long doctorId;
+    private @NonNull String doctor;
+    private String bed;
+    private String room;
+    private String functionalUnit;
 }
