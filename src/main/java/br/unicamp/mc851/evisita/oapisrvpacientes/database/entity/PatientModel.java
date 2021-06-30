@@ -18,16 +18,16 @@ public class PatientModel {
     @Id
     @Column(name = "paciente_prontuario_pk")
     @NonNull
-    private Long medicalRecord;
+    private String medicalRecord;
     @NonNull
     private String name;
     @NonNull
     private String rg;
     @NonNull
-    private Long cpf;
+    private String cpf;
     private String motherName;
     private String fatherName;
-    private Long susCardNumber;
+    private String susCardNumber;
     @Column(name = "medico_pk")
     private @NonNull String doctor;
     private LocalDateTime recordDate;

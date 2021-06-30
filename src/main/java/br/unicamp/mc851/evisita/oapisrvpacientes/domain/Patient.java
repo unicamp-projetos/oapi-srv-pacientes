@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Patient {
-    private Long medicalRecord;
+    private String medicalRecord;
     private String name;
     private String rg;
-    private Long cpf;
+    private String cpf;
     private String motherName;
     private String fatherName;
-    private Long susCardNumber;
+    private String susCardNumber;
     private String doctor;
     private String functionalUnit;
     private String bed;

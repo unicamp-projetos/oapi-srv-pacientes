@@ -6,9 +6,9 @@ import lombok.Data;
 @Data
 @Builder
 public class PatientResponse {
-    private Long medicalRecord;
+    private String medicalRecord;
     private String name;
-    private Long cpf;
+    private String cpf;
     private String rg;
     private String doctor;
     private String bed;
