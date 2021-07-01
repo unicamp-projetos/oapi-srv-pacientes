@@ -3,8 +3,6 @@ package br.unicamp.mc851.evisita.oapisrvpacientes.adapter;
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientRequest;
 import br.unicamp.mc851.evisita.oapisrvpacientes.database.entity.PatientModel;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 import lombok.experimental.UtilityClass;
 
 @UtilityClass

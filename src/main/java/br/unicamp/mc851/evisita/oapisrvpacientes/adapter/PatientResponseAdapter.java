@@ -1,8 +1,10 @@
 package br.unicamp.mc851.evisita.oapisrvpacientes.adapter;
 
 import br.unicamp.mc851.evisita.oapisrvpacientes.controller.dto.PatientResponse;
+import br.unicamp.mc851.evisita.oapisrvpacientes.database.entity.PatientModel;
 import br.unicamp.mc851.evisita.oapisrvpacientes.domain.Patient;
 import lombok.experimental.UtilityClass;
+import org.springframework.beans.BeanUtils;
 
 @UtilityClass
 public class PatientResponseAdapter {
@@ -18,5 +20,11 @@ public class PatientResponseAdapter {
                 .room(patient.getRoom())
                 .functionalUnit(patient.getFunctionalUnit())
                 .build();
+    }
+
+    public static PatientResponse convert(PatientModel model) {
+        var patientResponse = PatientResponse.builder().build();
+        BeanUtils.copyProperties(model, patientResponse);
+        return patientResponse;
     }
 }
