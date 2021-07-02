@@ -47,6 +47,6 @@ public class PatientsController {
     public ResponseEntity<PatientResponse> getPatientByMedicalRecord(@PathVariable String medicalRecord) {
         var patientResponse = getPatientByMedicalRecord.execute(medicalRecord);
         return patientResponse != null ?
-                ResponseEntity.ok(patientResponse) : ResponseEntity.noContent().build();
+                ResponseEntity.ok(patientResponse) : ResponseEntity.notFound().build();
     }
 }
